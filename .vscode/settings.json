@@ -1,0 +1,11 @@
+{
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "gridworld.jar"
+  ],
+  "java.project.sourcePaths": [
+    "projects/boxBug",
+    "projects/critters",
+    "projects/firstProject"
+  ]
+}
