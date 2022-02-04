@@ -38,8 +38,4 @@ public class NearsightedChameleon extends LonelyChameleon{
         }
         return n;
     }
-
-    public void makeMove(Location loc){
-        moveTo(getLocation());
-    }
 }
