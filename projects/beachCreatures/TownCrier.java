@@ -66,7 +66,5 @@ public class TownCrier extends Critter{
             setColor(new Color(250, 0, 0));
         }
     }
-    public void makeMove(Location loc){
-        moveTo(getLocation());
-    }
+    
 }

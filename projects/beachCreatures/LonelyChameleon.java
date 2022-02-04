@@ -37,7 +37,5 @@ public class LonelyChameleon extends Critter{
         }
         
     }
-    public void makeMove(Location loc){
-        moveTo(getLocation());
-    }
+
 }
