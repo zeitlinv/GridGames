@@ -8,13 +8,13 @@ public class TeamLee extends Team{
     super(isLeft);
     int direction = isLeft ? Location.EAST : Location.WEST;
     for (int i = 0; i < 2; i++){
-      addPet(new Mosquito(i, direction, this));
-    }
-    for (int i = 0; i < 2; i++){
       addPet(new Ant(i, direction, this));
     }
-    for (int i = 0; i < 1; i++){
+    for (int i = 0; i < 2; i++){
       addPet(new Beaver(i, direction, this));
+    }
+    for (int i = 0; i < 1; i++){
+      addPet(new Bluebird(i, direction, this));
     }
   }
 }
