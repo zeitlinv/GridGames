@@ -39,8 +39,11 @@ public class Critter extends Actor
     {
         if (getGrid() == null)
             return;
+        // Interaction
         ArrayList<Actor> actors = getActors();
         processActors(actors);
+
+        // Figure out how to move
         ArrayList<Location> moveLocs = getMoveLocations();
         Location loc = selectMoveLocation(moveLocs);
         makeMove(loc);
@@ -70,7 +73,7 @@ public class Critter extends Actor
      */
     public void processActors(ArrayList<Actor> actors)
     {
-        for (Actor a : actors)
+        for (Actor a : actors) // For Actor a in actors
         {
             if (!(a instanceof Rock) && !(a instanceof Critter))
                 a.removeSelfFromGrid();

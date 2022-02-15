@@ -4,8 +4,11 @@
     "gridworld.jar"
   ],
   "java.project.sourcePaths": [
-    "projects/boxBug",
+    "projects/firstProject",
+    "projects/fancyBugs",
     "projects/critters",
-    "projects/firstProject"
+    "projects/boxBug",
+    "projects/beachCreatures",
+    "projects/laneworld"
   ]
 }
