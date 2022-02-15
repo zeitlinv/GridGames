@@ -16,7 +16,7 @@ public class Mosquito extends Pet {
     if (opponent != null) {
       LaneWorldLogger.log(String.format("%s deals %d damage to %s.", this, startDamage, opponent));
       opponent.changeHp(-startDamage);
-      opponents.checkForFaintedPets(team);
+      opponents.checkForFaintedPets(team); // Important! Why?
     }
   }
 }

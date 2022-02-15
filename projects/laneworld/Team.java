@@ -52,10 +52,7 @@ public abstract class Team {
    *         if no such pet exists, then return null
    */
   public Pet getFrontPet() {
-    if (pets.isEmpty()) {
-      return null;
-    }
-    return pets.get(0);
+    /* TODO */
   }
 
   /**
@@ -63,16 +60,7 @@ public abstract class Team {
    *         if no such pet exists, then return null
    */
   public Pet getRandomPet(Pet p) {
-    if (pets.isEmpty() || pets.size() == 1) {
-      return null;
-    }
-
-    int index;
-    do {
-      index = random.nextInt(pets.size());
-    } while (pets.get(index).equals(p));
-
-    return pets.get(index);
+    /* TODO */
   }
 
   /* Setters */
@@ -101,29 +89,19 @@ public abstract class Team {
    */
   public void checkForFaintedPets(Team opponents) {
     for (Pet p : pets) {
-      if (p.fainted()) {
-        p.faint();
-        p.onFaint(opponents);
-      }
+      /* TODO */
     }
     pets.removeIf(p -> p.fainted());
     movePets();
   }
 
   /**
-   * Move each pet (except first) one step forward
+   * Move each pet one step forward if there is space
+   * The front pet cannot move forward if it would
+   * go into the middle Location (0,5)
    */
   public void movePets() {
-    int ahead = this.isLeft ? Location.EAST : Location.WEST;
-    for (int i = 0; i < pets.size(); i++) {
-      Pet p = pets.get(i);
-      Grid<Actor> gr = p.getGrid();
-      Location next = p.getLocation().getAdjacentLocation(ahead);
-      // Prevent pets from moving into middle spot
-      if (next.getCol() != 5 && gr.isValid(next) && gr.get(next) == null) {
-        p.moveTo(next);
-      }
-    }
+    /* TODO */
   }
 
   /**

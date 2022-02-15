@@ -30,21 +30,21 @@ public class LaneWorld extends ActorWorld {
   }
 
   /**
-   * Activate all abilities that happen at the start
-   */
-  private void activateStartAbilities() {
-    teamLeft.activateStartAbilities(teamRight);
-    teamRight.activateStartAbilities(teamLeft);
-    checkForFaintedPets();
-  }
-
-  /**
    * Place all pets from both teams into grid
    */
   private void placeTeams() {
     Grid<Actor> grid = getGrid();
     teamLeft.placePets(grid);
     teamRight.placePets(grid);
+  }
+
+  /**
+   * Activate all abilities that happen at the start
+   */
+  private void activateStartAbilities() {
+    teamLeft.activateStartAbilities(teamRight);
+    teamRight.activateStartAbilities(teamLeft);
+    checkForFaintedPets();
   }
 
   /**
@@ -71,13 +71,10 @@ public class LaneWorld extends ActorWorld {
 
   /**
    * Front pets of both teams fight each other
+   * Then check for fainted pets
    */
   private void battle() {
-    Pet left = teamLeft.getFrontPet();
-    Pet right = teamRight.getFrontPet();
-    left.attack(right);
-    right.attack(left);
-    checkForFaintedPets();
+    /* TODO */
   }
 
   /**
@@ -96,8 +93,8 @@ public class LaneWorld extends ActorWorld {
    * and preventing further steps.
    */
   private void checkWin() {
-    boolean leftKO = teamLeft.isAllFainted();
-    boolean rightKO = teamRight.isAllFainted();
+    /* TODO */
+
     if (leftKO || rightKO) {
       gameOver = true;
     }
